@@ -1,8 +1,7 @@
-a=int(input())
+a=input()
 b=input()
 total=0
-for i in b:
+for i in b: 
   total+=int(i)
-print(total)
-
-#b도 int로 하려고 했지만! for문에 int는 안된대!!
+print(total)  
+# 주의 : 'int' object is not iterable
