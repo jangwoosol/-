@@ -26,3 +26,13 @@
 
  <p>첫째 줄에 상수의 대답을 출력한다.</p>
 
+# 풀이
+문자 역순출력 방법
+1. str[::-1]
+2. "".join(reversed(str))
+3. for문으로 
+예시)
+str='abc de'
+rev=""
+for i in str:
+ rev=i+rev
