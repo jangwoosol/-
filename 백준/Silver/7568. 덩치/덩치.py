@@ -13,5 +13,5 @@ for i in range(n):
             count += 1 
     sor.append(count + 1) # 덩치 등수는 자신보다 몸무게 키 모두 큰 사람의 수 + 1 이므로 count + 1을 sor에 합한다.
  
-for d in sor:
-    print(d,end=" ")
+for d in sor: 
+    print(d,end=" ") #리스트 벗기기
