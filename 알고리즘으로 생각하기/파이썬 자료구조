@@ -1,0 +1,44 @@
+# TDM
+문서에 나타난 단어를 표로 정리한 것이다.
+tm패키지에서는 말뭉치라는 단위의 자료형을 사용한다.
+corpus함수로 데이터를 corpus로 변환한다.
+corpus로 데이터 형태 변환후 TermDocumentMatrix함수를 사용한다.
+
+tdm->dtm->lda
+
+# 문자열 메서드
+a.join(b) : 리스트 b에 있는 모든 문자열을 하나의 단일 문자열 a로 결합한다.
+a.format() : 문자열 a에 변수를 추가하거나 형식화할 때 사용
+예시) ‘{} 나이는{}’.format(‘안녕’, 23)
+
+a.splitlines() : 줄바꿈 문자를 기준으로 분리한 결과를 문자열 리스트로 반환한다.
+a.split() : 공백 문자로 구분한 문자열 리스트가 나온다. 
+a.strip(b) : 문자열a 앞뒤의 문자열 b를 제거한다. 인수 b없으면 공백문자 제거한다.
+a.find(sub,start,end) : 문자열a에서 sub의 인덱스위치를 반환하며 실패하면 –1 반환
+a.count(sub,start,end) : 문자열a에서 범위내에 부분 문자열 sub가 나온 횟수 반환
+a.replace(old,new,maxreplace) : 문자열a에서 문자열 대체로 max만큼 변경한 문자열의 복사본 반환. max지정하지 않으면 모든 old를 new로 변경한다.
+f-string : 문자열 앞에 f 붙이면 사용할 수 있다. 예시) name=’woo‘; f’그의 이름은 {name}‘
+ 
+# list 메서드
+a.append(x) : list a 끝에 항목 x를 추가한다. a[len(a):]=[x]와 동일
+a.extend(c) : 반복가능한 모든 항목 c를 리스트 a에 추가한다. a+=c 와 동일
+ex) ex=[‘사탕’,‘과일’]; ex.extend(‘음식’) --> [‘사탕’,‘과일’,‘음’,‘식’] 
+ex.extend([‘음식’]) --> [‘사탕’,‘과일’,‘음식’] 
+
+a.insert(i,x) : 인덱스 I위치에 항목 x를 삽입한다. #	변경아니고 삽입(추가)
+a.index(x) : 리스트에서 항목 x의 인덱스를 반환한다.
+a.count(x) : 항목 x가 몇 개 들어있는지 개수 반환
+a.sort() : 오름차순으로 , reverse=True 지정하면 내림차순
+a.reverse() : 리스트항목순서를 반전시켜 그 변수에 적용한다. list[::-1] 과 같다.
+
+리스트 comprehension
+[항목 for 항목 in 반복가능한 객체]
+[수식 for 항목 in 반복가능한 객체]
+[표현식 for 항목 in 반복가능한 객체 if 조건문]
+딕션어리 메서드
+a[key] -> value 값 나옴
+items()-> 다 나옴 keys() values()
+filter(함수, 반복객체) : 개별 요소를 반복적으로 셀 수 있는 객체를 입력받아 함수 수행한 후 결과 True인 것만 묶어서 반환한다. filter 객체 형태로 반환하기에 list로 감싸!
+map(함수, 반복객체) : 개별 요소를 반복적으로 셀 수 있는 객체를 입력받아 함수 수행한 후 결과 묶어서 반환한다. 객체 형태로 반환하기에 list로 감싸!
+enumerate() : for 문과 다르게 index 포함한 요솟값 반환
+lambda 인자: 코드 예시) lambda x: x*2
