@@ -1,3 +1,4 @@
+# 합한값이 그 다음 값보다 클지, 작을지에 따라 결정할 수 있따.
 a = int(input())
 b = list(map(int, input().split()))
 sum = [b[0]]
