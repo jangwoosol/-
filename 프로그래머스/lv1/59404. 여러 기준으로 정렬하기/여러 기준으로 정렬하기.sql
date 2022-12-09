@@ -1,4 +1,4 @@
 -- 코드를 입력하세요
-SELECT animal_id, name, datetime
-from animal_ins
-order by name Asc, datetime Desc ;
+SELECT ANIMAL_ID,NAME,DATETIME
+from ANIMAL_INS
+order by name, DATETIME DESC
