@@ -1,5 +1,5 @@
 -- 코드를 입력하세요
-SELECT animal_type, count(animal_type)
+SELECT ANIMAL_TYPE,count(ANIMAL_TYPE)
 from ANIMAL_INS
-group by animal_type
-order by animal_type # 고양이가 먼저
+group by ANIMAL_TYPE
+order by ANIMAL_TYPE
