@@ -1,4 +1,4 @@
 -- 코드를 입력하세요
-SELECT ANIMAL_ID,	NAME, substring(datetime,1,10) as 날짜
+SELECT ANIMAL_ID,	NAME,		date_format(DATETIME,'%Y-%m-%d' )as 날짜
 from ANIMAL_INS
-order by ANIMAL_ID
+order by animal_id
