@@ -1,12 +1,15 @@
-import sys
+# 0 ->0 1->1 2->2 3-> 3 4-> 5 5->8
+# 헉 이전 두개 값 더하는 거다. = 피보나치 수열
+def fib(n):
+  a,b=1,2
+  
+  for i in range(n-2):
+    a,b=b%15746,(a+b)%15746
+  return b
 
-N = int(sys.stdin.readline())
+n=int(input())
 
-dp = [0] * 1000001
-dp[1] = 1
-dp[2] = 2
-
-for i in range(3, N+1):
-    dp[i] = (dp[i-1] + dp[i-2]) % 15746 # (너무 큰 출력으로 인해) 나눠줌
-
-print(dp[N])
+if n==1:
+  print(1)
+else:
+  print(fib((n)))
