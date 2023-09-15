@@ -1,7 +1,7 @@
 -- 코드를 입력하세요
-SELECT a.PRODUCT_ID,a.PRODUCT_NAME, sum(a.price*b.amount) as total_sales
-from FOOD_PRODUCT as a join (select PRODUCT_ID, PRODUCE_DATE, amount
-                             from FOOD_ORDER where PRODUCE_DATE like '2022-05%') as b
-                             on a.PRODUCT_ID=b.PRODUCT_ID 
-group by a.product_id 
-order by total_sales desc, product_id
+SELECT food_product.product_id,food_product.PRODUCT_NAME,sum(food_product.price*a.amount) as TOTAL_SALES
+from (select *
+from food_order 
+where produce_date like "2022-05%") as a join food_product on a.product_id=food_product.product_id
+group by product_id
+order by  TOTAL_SALES desc, product_id 
