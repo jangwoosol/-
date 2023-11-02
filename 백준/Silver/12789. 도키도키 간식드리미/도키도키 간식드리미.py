@@ -1,25 +1,23 @@
-import sys
+n=int(input())
+a=list(map(int,input().split()))
 
-N = int(input())
-stack2 = []
-cnt = 1
+target=1
+stack=[]
 
-l = list(map(int,sys.stdin.readline().split()))
-while l:
-    if cnt==l[0]:
-        cnt+=1
-        l.pop(0)
+while a:
+    if target==a[0]:
+        a.pop(0)
+        target+=1
     else:
-        stack2.append(l.pop(0))
-
-    while stack2:
-        if stack2[-1] == cnt:
-            stack2.pop()
-            cnt+=1
+        stack.append(a.pop(0))
+    while stack:
+        if stack[-1]==target:
+            stack.pop()
+            target+=1
         else:
             break
-
-if len(stack2)==0:
-    print("Nice")
+if not stack:
+    print('Nice')
 else:
-    print("Sad")
+    print('Sad')
+        
